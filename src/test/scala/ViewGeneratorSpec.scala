@@ -1,15 +1,19 @@
 import org.scalatest.{FreeSpec, MustMatchers}
 
-class VisualBuilderSpec extends FreeSpec with MustMatchers {
+class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
-  "visualBuilder" - {
+  "ViewGenerator" - {
 
     "must create a string using the correct Pet's name" in {
       val pet = Pet("Name")
-      val visuals = new VisualBuilder(pet)
+      val visuals = new ViewGenerator()
 
-      visuals.create mustEqual "Pet's name: Name"
+      visuals.create(pet) mustEqual {
+        s"   Pet's name: ${pet.name} \n" +
+        "           ฅ ̳͒•ˑ̫• ̳͒ฅ           \n" +
+        s"     Hunger: ${pet.hunger} \n"
+      }
+
     }
   }
-
 }

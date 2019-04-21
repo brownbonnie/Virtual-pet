@@ -4,11 +4,11 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
   "ViewGenerator" - {
 
-    "must create a string using the correct Pet's name" in {
+    "must create a string using the correct Pet state and the right visual format" in {
       val pet = Pet("Name")
-      val visuals = new ViewGenerator()
+      val visual = new ViewGenerator()
 
-      visuals.create(pet) mustEqual {
+      visual.create(pet) mustEqual {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ ̳͒•ˑ̫• ̳͒ฅ           \n" +
         s"     Hunger: ${pet.hunger} \n"

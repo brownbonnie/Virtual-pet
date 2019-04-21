@@ -1,7 +1,8 @@
-class VisualBuilder(pet:Pet) {
+class ViewGenerator {
 
-  def create: String = {
-    s"Pet's name: ${pet.name}"
-  }
+  def create(pet: Pet): String = {
+    s"   Pet's name: ${pet.name} \n" +
+    "           ฅ ̳͒•ˑ̫• ̳͒ฅ           \n" +
+    s"     Hunger: ${pet.hunger} \n"
 
 }

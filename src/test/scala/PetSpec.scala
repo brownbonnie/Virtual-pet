@@ -5,13 +5,30 @@ class PetSpec extends FreeSpec with MustMatchers {
   "a Pet" - {
 
     "must have a name matching the user's input" in {
-      val mockInput = "Name"
-      val pet = Pet(mockInput)
+      val name = "Name"
+      val hunger = 10
+      val pet = Pet(name, hunger)
 
-      pet.name mustEqual "Name"
+      pet.name mustEqual name
 
     }
 
+    "must have a hunger level defaulted at 10" in {
+      val name = "Name"
+      val pet = Pet(name)
+
+      pet.hunger mustEqual 10
+
+    }
+
+    "must decrease hunger level by one when getHungry is called" in {
+      val name = "Name"
+      val pet = Pet(name)
+
+      val newPet = pet.getHungry
+
+      newPet.hunger mustEqual 9
+    }
 
   }
 

@@ -4,27 +4,22 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
   "ViewGenerator" - {
 
-//    //Not implemented yet
-//    "must create a string with the correct state of" - {
+//    "must create a string with the correct state for" - {
 //
-//      val pet = Pet("Name")
+//      val pet = Pet("Name", happiness = true)
 //      val viewGenerator = new ViewGenerator()
 //
 //      "name" in {
-//        ???
+//
 //      }
 //
 //      "hunger" in {
-//        ???
-//      }
 //
-//      "happiness" in {
-//        ???
 //      }
 //
 //    }
 
-    "must create a default string using the correct Pet state and the right visual format" in {
+    "must create a default string using the correct Pet state" in {
       val pet = Pet("Name")
       val viewGenerator = new ViewGenerator()
 
@@ -32,7 +27,7 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ ̳͒•ˑ̫• ̳͒ฅ           \n" +
         s"     Hunger: ${pet.hunger} \n" +
-        s"     Mood: ${pet.happiness} \n "
+        s"     Mood: ${pet.calculateHappiness} \n "
       }
     }
 
@@ -44,23 +39,21 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ ̳͒°×° ̳͒ฅ           \n" +
         s"     Hunger: ${pet.hunger} Hungry!\n" +
-        s"     Mood: ${pet.happiness} \n "
+        s"     Mood: ${pet.calculateHappiness} \n "
       }
     }
 
     "must create a new string when Pet happiness is false" in {
-      val pet = Pet("Name", happiness = false)
+      val pet = Pet("Name", 1)
       val viewGenerator = new ViewGenerator
 
       viewGenerator.create(pet) mustEqual {
         s"   Pet's name: ${pet.name} \n"    +
-          "           ฅ^•̯ •^ฅ           \n" +
-          s"     Hunger: ${pet.hunger} \n"  +
-          s"     Mood: ${pet.happiness} Sad! \n "
+        "           ฅ^•̯ •^ฅ           \n" +
+        s"     Hunger: ${pet.hunger} \n"  +
+        s"     Mood: ${pet.calculateHappiness} Sad! \n "
       }
     }
 
-
-
-    }
+  }
 }

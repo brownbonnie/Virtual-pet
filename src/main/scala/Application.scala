@@ -65,5 +65,7 @@ object Application {
     val fedPet9 = fedPet8.incrementHunger
     println(viewGenerator.create(fedPet9))
 
+
+
   }
 }

@@ -3,22 +3,7 @@ import org.scalatest.{FreeSpec, MustMatchers}
 class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
   "ViewGenerator" - {
-
-//    "must create a string with the correct state for" - {
-//
-//      val pet = Pet("Name", happiness = true)
-//      val viewGenerator = new ViewGenerator()
-//
-//      "name" in {
-//
-//      }
-//
-//      "hunger" in {
-//
-//      }
-//
-//    }
-
+    
     "must create a default string using the correct Pet state" in {
       val pet = Pet("Name")
       val viewGenerator = new ViewGenerator()
@@ -54,6 +39,5 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
         s"     Mood: ${pet.calculateHappiness} Sad! \n "
       }
     }
-
   }
 }

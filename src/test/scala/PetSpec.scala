@@ -22,14 +22,20 @@ class PetSpec extends FreeSpec with MustMatchers {
     }
 
     "must decrease hunger level by one when getHungry is called" in {
-      val name = "Name"
-      val pet = Pet(name)
+      val pet = Pet("Name")
 
-      val newPet = pet.getHungry
+      val hungryPet = pet.getHungry
 
-      newPet.hunger mustEqual 9
+      hungryPet.hunger mustEqual 9
+    }
+
+    "must change happiness to false when getSad is called" in {
+      val pet = Pet("Name")
+
+      val sadPet = pet.getSad
+
+      sadPet.happiness mustEqual false
     }
 
   }
-
 }

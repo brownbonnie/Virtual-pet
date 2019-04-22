@@ -1,0 +1,11 @@
+pet.name   = Pet's name: {0}
+
+pet        = ฅ^•ﻌ•^ฅ
+pet.hungry = ฅ^>×<^ฅ
+pet.sad    = ฅ^•̯ •^ฅ
+
+pet.hunger        = Hunger: {0}
+pet.hungryMessage = Hunger: {0} Hungry!
+pet.mood          = Mood: {0}
+pet.sadMessage    = Mood: {0} Sad..
+

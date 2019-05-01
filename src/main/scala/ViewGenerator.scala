@@ -1,4 +1,4 @@
-class ViewGenerator {
+class ViewGenerator(pet:Pet) {
 
   def create(pet: Pet): String = {
     pet match {
@@ -10,15 +10,66 @@ class ViewGenerator {
 
       case hungry if pet.hunger < 5 =>
         s"   Pet's name: ${pet.name} \n" +
-        "           ฅ ̳͒°×° ̳͒ฅ           \n" +
+        "           ฅ^>×<^ฅ           \n" +
         s"     Hunger: ${pet.hunger} Hungry!\n" +
         s"     Mood: ${pet.calculateHappiness} \n "
 
       case _ =>
         s"   Pet's name: ${pet.name} \n" +
-        "           ฅ ̳͒•ˑ̫• ̳͒ฅ           \n" +
+        "           ฅ^•ﻌ•^ฅ           \n" +
         s"     Hunger: ${pet.hunger} \n" +
         s"     Mood: ${pet.calculateHappiness} \n "
     }
   }
+
+  def screen: String =
+    "############################################################################################################################################################ \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+   s"#                                                           Pet's name: ${pet.name}                                                                        # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+   s"#                                                                   ${pet}                                                                                 # \n" +
+    "#                                                                                                                                                          # \n" +
+   s"#                                                            Hunger: ${pet.hunger}                                                                         # \n" +
+   s"#                                                          Mood: ${pet.calculateHappiness}                                                                 # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "#                                                                                                                                                          # \n" +
+    "############################################################################################################################################################ \n"
 }

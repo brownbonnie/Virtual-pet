@@ -7,5 +7,4 @@ pet.sad    = ฅ^•̯ •^ฅ
 pet.hunger        = Hunger: {0}
 pet.hungryMessage = Hunger: {0} Hungry!
 pet.mood          = Mood: {0}
-pet.sadMessage    = Mood: {0} Sad..
-
+pet.sadMessage    = Mood: {0} Sad!

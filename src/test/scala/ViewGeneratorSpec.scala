@@ -4,17 +4,17 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
   "ViewGenerator" - {
 
-    val colours = new FontColours
+    val colour = new FontColours
     
     "must create a default string using the correct Pet state" in {
       val pet = Pet("Name")
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.petAndStats(pet) mustEqual {
+      viewGenerator.petAndStats(pet, colour.purple) mustEqual {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ^•ﻌ•^ฅ           \n" +
-        s"     Hunger: ${pet.hunger} \n" +
-        s"     Mood: ${pet.calculateHappiness} \n "
+        s"     Hunger: 10 \n" +
+        s"     Mood: happy \n "
       }
     }
 
@@ -22,11 +22,11 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
       val pet = Pet("Name", hunger = 4)
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.petAndStats(pet) mustEqual {
+      viewGenerator.petAndStats(pet, colour.purple) mustEqual {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ^>×<^ฅ           \n" +
-        s"     Hunger: ${pet.hunger} Hungry!\n" +
-        s"     Mood: ${pet.calculateHappiness} \n "
+        s"     Hunger: 4 Hungry!\n" +
+        s"     Mood: sad \n "
       }
     }
 
@@ -34,11 +34,11 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
       val pet = Pet("Name", 1)
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.petAndStats(pet) mustEqual {
+      viewGenerator.petAndStats(pet, colour.purple) mustEqual {
         s"   Pet's name: ${pet.name} \n"    +
         "           ฅ^•̯ •^ฅ           \n" +
-        s"     Hunger: ${pet.hunger} \n"  +
-        s"     Mood: ${pet.calculateHappiness} Sad! \n "
+        s"     Hunger: happy \n"  +
+        s"     Mood: sad \n "
       }
     }
   }

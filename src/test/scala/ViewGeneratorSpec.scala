@@ -3,6 +3,8 @@ import org.scalatest.{FreeSpec, MustMatchers}
 class ViewGeneratorSpec extends FreeSpec with MustMatchers {
 
   "ViewGenerator" - {
+
+    val colours = new FontColours
     
     "must create a default string using the correct Pet state" in {
       val pet = Pet("Name")

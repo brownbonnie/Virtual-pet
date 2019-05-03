@@ -8,7 +8,7 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
       val pet = Pet("Name")
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.create(pet) mustEqual {
+      viewGenerator.petAndStats(pet) mustEqual {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ^•ﻌ•^ฅ           \n" +
         s"     Hunger: ${pet.hunger} \n" +
@@ -20,7 +20,7 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
       val pet = Pet("Name", hunger = 4)
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.create(pet) mustEqual {
+      viewGenerator.petAndStats(pet) mustEqual {
         s"   Pet's name: ${pet.name} \n" +
         "           ฅ^>×<^ฅ           \n" +
         s"     Hunger: ${pet.hunger} Hungry!\n" +
@@ -32,7 +32,7 @@ class ViewGeneratorSpec extends FreeSpec with MustMatchers {
       val pet = Pet("Name", 1)
       val viewGenerator = new ViewGenerator(pet)
 
-      viewGenerator.create(pet) mustEqual {
+      viewGenerator.petAndStats(pet) mustEqual {
         s"   Pet's name: ${pet.name} \n"    +
         "           ฅ^•̯ •^ฅ           \n" +
         s"     Hunger: ${pet.hunger} \n"  +

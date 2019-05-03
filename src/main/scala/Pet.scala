@@ -1,16 +1,16 @@
 case class Pet(name: String, hunger: Int = 10) {
 
-  def reduceHunger: Pet = {
+  def getHungry: Pet = {
     Pet(name, hunger - 1)
   }
 
-  def incrementHunger: Pet = {
+  def feed: Pet = {
     Pet(name, hunger + 1)
   }
 
-  def calculateHappiness: Boolean = {
-    if (hunger == 1) false
-    else true
+  def calculateHappiness: String = {
+    if (hunger == 1) {"sad"}
+    else {"happy"}
     }
 
 }

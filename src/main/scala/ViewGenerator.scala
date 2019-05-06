@@ -12,28 +12,28 @@ class ViewGenerator(pet:Pet) {
       " `',;*#@@@@@@@@@@@#*;,'´      \n" +
       "  `',;*#@@@@@@@@@#*;,'´       \n" +
       "      ´`˅**###**˅'`           \n" +
-      "          ´˅˅˅`              \n\n\n"
+      "          ´˅˅˅`               \n\n"
   }
 
   def petAndStats(pet: Pet, colour: Int): String = {
     pet match {
       case sad if pet.hunger == 1 =>
-        s"\t\t\t\t\t\t    Pet's name: ${pet.name} \n" +
-        "\t\t\t\t\t\t          ฅ^•̯ •^ฅ           \n" +
-        s"\t\t\t\t\t\t      Hunger: ${pet.hunger} \n" +
-        s"\t\t\t\t\t\t      Mood: ${pet.calculateHappiness} Sad! \n "
+        s"Name: ${pet.name} \n\n" +
+        s"Hunger: ${pet.hunger} \n" +
+        s"Mood: ${pet.calculateHappiness} Sad! \n\n" +
+        "ฅ^•̯ •^ฅ"
 
       case hungry if pet.hunger < 5 =>
-        s"\t\t\t\t\t\t    Pet's name: ${pet.name} \n" +
-        "\t\t\t\t\t\t         ฅ^>×<^ฅ           \n" +
-        s"\t\t\t\t\t\t      Hunger: ${pet.hunger} Hungry!\n" +
-        s"\t\t\t\t\t\t      Mood: ${pet.calculateHappiness} \n "
+        s"Name: ${pet.name} \n\n" +
+        s"Hunger: ${pet.hunger} Hungry!\n" +
+        s"Mood: ${pet.calculateHappiness} \n\n" +
+        "ฅ^>×<^ฅ"
 
       case _ =>
-        s"\t\t\t\t\t\t    Pet's name: ${pet.name} \n" +
-        "\t\t\t\t\t\t         ฅ^•ﻌ•^ฅ           \n" +
-        s"\t\t\t\t\t\t      Hunger: ${pet.hunger} \n" +
-        s"\t\t\t\t\t\t      Mood: ${pet.calculateHappiness} \n "
+        s"Name: ${pet.name} \n\n" +
+        s"Hunger: ${pet.hunger} \n" +
+        s"Mood: ${pet.calculateHappiness} \n\n" +
+        "ฅ^•ﻌ•^ฅ"
     }
   }
 
@@ -46,50 +46,5 @@ class ViewGenerator(pet:Pet) {
       "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
       "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n"
     }
-
-  def screen(colour: Int): String = {
-    colour
-      "############################################################################################################################################################ \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "#                                                                                                                                                          # \n" +
-      "############################################################################################################################################################ \n"
-  }
 
 }
